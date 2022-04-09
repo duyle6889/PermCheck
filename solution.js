@@ -4,8 +4,8 @@
 function solution(A) {
     A.sort((a, b) => a - b);
     let n = A.length;
-    for (let i = 0; i < n - 1; i++) {
-        if (A[i] + 1 != A[i + 1]) {
+    for (let i = 1; i <= n; i++) {
+        if (A[i - 1] != i) {
             return 0;
         }
     }
